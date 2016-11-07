@@ -131,11 +131,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SensorListActivity"
+        <activity
+            android:name=".SensorListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="Sensor List"/>
-
-
+            android:label="Sensor List" />
+        <activity android:name=".ImageEditorActivity"></activity>
     </application>
 
 </manifest>

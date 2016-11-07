@@ -386,6 +386,72 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/ll13"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:onClick="gotoActivity"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_win_image_effect_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Image Editor"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll14"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/background_color"
+                    android:onClick="gotoActivity"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_win_google" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Google News"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
 
         </LinearLayout>
 

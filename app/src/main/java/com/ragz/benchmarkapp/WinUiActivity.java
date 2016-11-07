@@ -63,6 +63,12 @@ public class WinUiActivity extends AppCompatActivity {
             case R.id.ll12:
                 openApp(this, "com.facebook.katana");
                 break;
+            case R.id.ll13:
+                startActivity(new Intent(context, ImageEditorActivity.class));
+                break;
+            case R.id.ll14:
+                startActivity(new Intent(context,ImageEditorActivity.class));
+                break;
         }
 
     }
