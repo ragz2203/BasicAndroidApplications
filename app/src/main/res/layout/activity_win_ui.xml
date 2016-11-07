@@ -527,13 +527,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@mipmap/ic_win_registration" />
+                        android:src="@mipmap/ic_win_contact_icon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Register"
+                        android:text="Contact"
                         android:textColor="@color/text_color_white"
                         android:textSize="12sp" />
                 </LinearLayout>

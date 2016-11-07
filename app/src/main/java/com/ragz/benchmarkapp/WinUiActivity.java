@@ -72,6 +72,9 @@ public class WinUiActivity extends AppCompatActivity {
             case R.id.LL_16:
                 startActivity(new Intent(context, A1.class));
                 break;
+            case R.id.LL_17:
+                startActivity(new Intent(context, DisplayContactActivity.class));
+                break;
         }
 
     }
@@ -86,5 +89,4 @@ public class WinUiActivity extends AppCompatActivity {
         context.startActivity(i);
         return true;
     }
-
 }
