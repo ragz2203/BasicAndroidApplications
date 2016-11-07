@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 public class LifeCycleActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getName();
+    private static final String TAG = BenchMarkActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

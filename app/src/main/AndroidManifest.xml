@@ -21,7 +21,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".BenchMarkActivity" />
         <activity
             android:name=".ToastActivity"
             android:label="Toast Position" />
@@ -37,6 +37,7 @@
             android:label="Massage App" />
         <activity
             android:name=".LifeCycleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Android Life Cycle" />
         <activity
             android:name=".NavigationActivity"
@@ -107,14 +108,34 @@
             </intent-filter>
             -->
         </activity>
-        <activity android:name=".DemoAsyncTaskActivity"
+        <activity
+            android:name=".DemoAsyncTaskActivity"
             android:configChanges="orientation|keyboardHidden|screenSize">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".WinUiActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:icon="@mipmap/ic_win_metro"
+            android:label="Metro Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SensorListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Sensor List"/>
+
+
     </application>
 
 </manifest>

@@ -26,8 +26,7 @@ public class NavigationActivity extends AppCompatActivity {
     private WifiManager wifiManager;
     private ToggleButton tbtnwifi;
     private Button btnNotify;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +94,7 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(new Intent(context, ToastActivity.class));
                 break;
             case R.id.ivBench:
-                startActivity(new Intent(context, MainActivity.class));
+                startActivity(new Intent(context, BenchMarkActivity.class));
                 break;
             case R.id.ivWebView:
                 startActivity(new Intent(context, WebActivity.class));
@@ -119,7 +118,7 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btnBenchMarkAct:
-                startActivity(new Intent(context, MainActivity.class));
+                startActivity(new Intent(context, BenchMarkActivity.class));
                 break;
             case R.id.btnWebAct:
                 startActivity(new Intent(context, WebActivity.class));

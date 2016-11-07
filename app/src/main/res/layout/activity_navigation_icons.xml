@@ -41,16 +41,6 @@
             app:srcCompat="@drawable/message_icon" />
 
         <ImageView
-            android:id="@+id/ivBench"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_column="0"
-            android:layout_margin="10dp"
-            android:layout_row="1"
-            android:onClick="gotoApp"
-            app:srcCompat="@drawable/benchmark_icon" />
-
-        <ImageView
             android:id="@+id/ivWebView"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -101,15 +91,18 @@
             android:onClick="gotoApp"
             app:srcCompat="@drawable/animation_icon" />
 
+        <ImageView
+            android:id="@+id/ivBench"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:layout_row="1"
+            android:onClick="gotoApp"
+            app:srcCompat="@drawable/benchmark_icon" />
+
 
     </GridLayout>
-
-    <ToggleButton
-        android:id="@+id/tbtnWifi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textOff="Wifi is Off"
-        android:textOn="Wifi is On" />
 
     <Button
         android:onClick="notificationMessage"
@@ -117,5 +110,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Notify" />
+
+    <ToggleButton
+        android:id="@+id/tbtnWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textOff="Wifi is Off"
+        android:textOn="Wifi is On" />
 
 </LinearLayout>
