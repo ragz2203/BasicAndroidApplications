@@ -57,20 +57,15 @@ public class ImageEditorActivity extends AppCompatActivity {
         if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(bitmap);
-            Effects();
+            effects();
             Button();
-        }
-
-        else
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-
+        } else if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri uri = data.getData();
-
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
                 ImageView imageView = (ImageView) findViewById(R.id.imageView);
                 imageView.setImageBitmap(bitmap);
-                Effects();
+                effects();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -86,7 +81,7 @@ public class ImageEditorActivity extends AppCompatActivity {
         return true;
     }
 
-    public void Button(){
+    public void Button() {
         btnGrayScale.setAlpha(1);
         btnGrayScale.setEnabled(true);
 
@@ -101,8 +96,8 @@ public class ImageEditorActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        switch(item.getItemId()){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
             case R.id.camera_id:
                 Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
@@ -111,31 +106,18 @@ public class ImageEditorActivity extends AppCompatActivity {
             case R.id.gallery_id:
                 Intent galleryintent = new Intent(Intent.ACTION_PICK,
                         android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-
                 galleryintent.setType("image/*");
-
                 startActivityForResult(Intent.createChooser(galleryintent, "Select Picture"), PICK_IMAGE_REQUEST);
                 break;
-
         }
         return true;
     }
 
-
-    public void Effects(){
-        //imageView.setDrawingCacheEnabled(false);
-                /*imageView.measure(
-                        View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
-                        View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-                imageView.layout(0, 0, imageView.getMeasuredWidth(), imageView.getMeasuredHeight());*/
-
+    public void effects() {
         imageView.buildDrawingCache(false);
-
-
         originalImage = Bitmap.createBitmap(imageView.getDrawingCache());
         imageView.setDrawingCacheEnabled(false);
     }
-
 
     public void doImageProcessing(View view) {
         switch (view.getId()) {
@@ -167,15 +149,15 @@ public class ImageEditorActivity extends AppCompatActivity {
         height = originalImage.getHeight();
         width = originalImage.getWidth();
 
-        Bitmap bmpGrayscale = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
-        Canvas c = new Canvas(bmpGrayscale);
+        Bitmap bmpGrayScale = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+        Canvas c = new Canvas(bmpGrayScale);
         Paint paint = new Paint();
         ColorMatrix cm = new ColorMatrix();
         cm.setSaturation(0);
         ColorMatrixColorFilter f = new ColorMatrixColorFilter(cm);
         paint.setColorFilter(f);
         c.drawBitmap(originalImage, 0, 0, paint);
-        return bmpGrayscale;
+        return bmpGrayScale;
     }
 
     public Bitmap toBW(Bitmap bitmapOriginal) {
@@ -189,9 +171,10 @@ public class ImageEditorActivity extends AppCompatActivity {
         ma.setSaturation(2);
         Paint paint = new Paint();
         paint.setColorFilter(new ColorMatrixColorFilter(ma));
-        canvas.drawBitmap(bitmapOriginal,0,0,paint);
+        canvas.drawBitmap(bitmapOriginal, 0, 0, paint);
         return bmpMonochrome;
     }
+
     public Bitmap toSaturation(Bitmap bitmapOriginal) {
         int width, height;
         height = bitmapOriginal.getHeight();
@@ -202,7 +185,7 @@ public class ImageEditorActivity extends AppCompatActivity {
         ma.setSaturation(2);
         Paint paint = new Paint();
         paint.setColorFilter(new ColorMatrixColorFilter(ma));
-        canvas.drawBitmap(bitmapOriginal,0,0,paint);
+        canvas.drawBitmap(bitmapOriginal, 0, 0, paint);
         return bmpMonochrome;
     }
 
@@ -233,7 +216,7 @@ public class ImageEditorActivity extends AppCompatActivity {
                 0,
                 0,
                 0,
-                1,0,0,0,0,1,1,1,1};
+                1, 0, 0, 0, 0, 1, 1, 1, 1};
 
         ColorMatrix sepiaMatrix = new ColorMatrix();
         sepiaMatrix.set(sepMat);

@@ -135,7 +135,10 @@
             android:name=".SensorListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="Sensor List" />
-        <activity android:name=".ImageEditorActivity"></activity>
+        <activity android:name=".ImageEditorActivity" />
+        <activity android:name=".SensorValuesActivity" />
+        <activity android:name=".A1" />
+        <activity android:name=".A2"></activity>
     </application>
 
 </manifest>
