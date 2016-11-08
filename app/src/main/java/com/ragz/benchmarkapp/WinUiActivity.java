@@ -75,6 +75,9 @@ public class WinUiActivity extends AppCompatActivity {
             case R.id.LL_17:
                 startActivity(new Intent(context, DisplayContactActivity.class));
                 break;
+            case R.id.LL_18:
+                startActivity(new Intent(context, MapsActivity.class));
+                break;
         }
 
     }
