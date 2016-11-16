@@ -12,7 +12,6 @@ public class WinUiActivity extends AppCompatActivity {
     final Context context = this;
     private Intent intent;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +75,7 @@ public class WinUiActivity extends AppCompatActivity {
                 startActivity(new Intent(context, DisplayContactActivity.class));
                 break;
             case R.id.LL_18:
-                startActivity(new Intent(context, MapsActivity.class));
+                startActivity(new Intent(context, GpsActivity.class));
                 break;
         }
 
